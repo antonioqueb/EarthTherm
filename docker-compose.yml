@@ -7,12 +7,12 @@ services:
     ports:
      - "7001:7001"
     volumes:
-      - app_static_volume:/appcash/dist/
+      - app_static_volume:/app/dist/
 
   nginx:
     image: nginx:latest
     volumes:
-      - app_static_volume:/cash-converter-dist/
+      - app_static_volume:/app-dist/
       - ./nginx/conf.d/queb-online.conf:/etc/nginx/conf.d/default.conf
     ports:
       - "80:80"
